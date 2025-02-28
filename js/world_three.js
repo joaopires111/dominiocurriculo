@@ -2,14 +2,14 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'gtlf';
 import { OrbitControls } from 'orbit';
-const duneUrl = new URL('../assets/models/dune2.gltf', import.meta.url);
+const duneUrl = new URL('../assets/models/dune4.gltf', import.meta.url);
 
 //VARIABLES
 const renderer = new THREE.WebGLRenderer();
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(55, window.innerWidth / window.innerHeight, 0.1, 1000);
-const ambientlight = new THREE.AmbientLight(0xffffff, 0.5);
-const directionlight1 = new THREE.DirectionalLight(0xffffff, 0.8);
+const ambientlight = new THREE.AmbientLight(0xffffff, 0.1);
+const directionlight1 = new THREE.DirectionalLight(0xffffff, 1.2);
 const dlighthelper1 = new THREE.CameraHelper(directionlight1.shadow.camera);
 const assetLoader = new GLTFLoader();
 const axis = new THREE.Vector3(1,0,0);
